@@ -16,10 +16,13 @@ namespace AngularProjectAPI.Models
 
         //Relations
         public int TagID { get; set; }
+        [JsonIgnore]
         public Tag Tag { get; set; }
         public int UserID { get; set; }
+        [JsonIgnore]
         public User User { get; set; } //Creator
         public int ArticleStatusID { get; set; }
+        [JsonIgnore]
         public ArticleStatus ArticleStatus { get; set; }
         [JsonIgnore]
         public ICollection<Like> Likes { get; set; }
