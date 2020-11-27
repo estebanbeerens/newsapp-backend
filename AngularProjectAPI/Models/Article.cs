@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace AngularProjectAPI.Models
@@ -20,5 +21,9 @@ namespace AngularProjectAPI.Models
         public User User { get; set; } //Creator
         public int ArticleStatusID { get; set; }
         public ArticleStatus ArticleStatus { get; set; }
+        [JsonIgnore]
+        public ICollection<Like> Likes { get; set; }
+        [JsonIgnore]
+        public ICollection<Comment> Comments { get; set; }
     }
 }

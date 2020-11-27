@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace AngularProjectAPI.Models
@@ -20,6 +21,10 @@ namespace AngularProjectAPI.Models
         //Relations
         public int RoleID { get; set; }
         public Role Role { get; set; }
+        [JsonIgnore]
+        public ICollection<Like> Likes { get; set; }
+        [JsonIgnore]
+        public ICollection<Comment> Comments { get; set; }
 
     }
 }
