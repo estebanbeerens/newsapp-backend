@@ -20,7 +20,6 @@ namespace AngularProjectAPI.Models
 
         //Relations
         public int RoleID { get; set; }
-        [JsonIgnore]
         public Role Role { get; set; }
         [JsonIgnore]
         public ICollection<Like> Likes { get; set; }
